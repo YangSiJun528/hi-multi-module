@@ -1,4 +1,4 @@
 rootProject.name = 'hi'
-include 'hi-core'
 include 'hi-web'
 include 'hi-batch'
+include 'hi-persistence'
