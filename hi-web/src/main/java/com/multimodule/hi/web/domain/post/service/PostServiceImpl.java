@@ -20,8 +20,7 @@ public class PostServiceImpl implements PostService {
         if(postRepository.existsByTitle(dto.title())) {
             throw new RuntimeException("이미 존재하는 Post 입니다");
         }
-        Post savedPost = postRepository.save(dto.toEntity());
-        PostResDto.from(savedPost);
+        postRepository.save(dto.toEntity());
     }
 
     public PostResDto find(Long id) {
