@@ -10,5 +10,5 @@ import java.util.Optional;
 
 public interface PostRepository extends JpaRepository<Post, Long> {
     Optional<Post> findByTitle(String title);
-    boolean existPByTitle(String title);
+    boolean existsByTitle(String title);
 }
