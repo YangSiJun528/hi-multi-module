@@ -36,23 +36,3 @@ subprojects { // 자식 프로젝트에 적용
         useJUnitPlatform()
     }
 }
-
-// 서브 프로젝트 개별 설정
-// 이곳에서 lombok 같은 dependency 를 추가 할 수 있으나
-// 해당 모듈 내에서도 추가 할 수 있기때문에 프로젝트간의 관계만 명시하도록 하자.
-// -> 라고 하는데, 굳이? 그냥 관계 설정도 각 모듈에서 하면 안되나. 이러면 관리하기 오히려 불편할거 같은데
-project(':hi-persistence') {
-    dependencies {}
-}
-
-project(':hi-web') {
-    dependencies {
-        implementation project(':hi-persistence')
-    }
-}
-
-project(':hi-batch') {
-    dependencies {
-        implementation project(':hi-persistence')
-    }
-}
