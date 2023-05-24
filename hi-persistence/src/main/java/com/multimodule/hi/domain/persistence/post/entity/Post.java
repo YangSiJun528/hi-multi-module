@@ -1,4 +1,4 @@
-package com.multimodule.hi.persistence.post.entity;
+package com.multimodule.hi.domain.persistence.post.entity;
 
 import jakarta.persistence.*;
 import lombok.AccessLevel;
